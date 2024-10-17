@@ -1,0 +1,229 @@
+{
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2024-10-17T17:53:13.290Z",
+    "__export_source": "insomnia.desktop.app:v10.1.0",
+    "resources": [
+        {
+            "_id": "req_f06464c705b04ef5996b153eed28150f",
+            "parentId": "wrk_3866b817c9dc41f7b9d8cc6fd06ce11f",
+            "modified": 1729187051778,
+            "created": 1729137398283,
+            "url": "{{ _.baseUrl }}/api/pokemons",
+            "name": "Obtener todos los pokemons",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/10.1.0"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1729137398283,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "wrk_3866b817c9dc41f7b9d8cc6fd06ce11f",
+            "parentId": null,
+            "modified": 1729137736350,
+            "created": 1729137277253,
+            "name": "PokeApi CRUD",
+            "description": "",
+            "scope": "collection",
+            "_type": "workspace"
+        },
+        {
+            "_id": "req_339db561c6ce453f8e404803894664fd",
+            "parentId": "wrk_3866b817c9dc41f7b9d8cc6fd06ce11f",
+            "modified": 1729187467240,
+            "created": 1729137569147,
+            "url": "{{ _.baseUrl }}/api/pokemon/",
+            "name": "Obtener un pokemon",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [
+                {
+                    "id": "pair_a7f6abc2be6d44a9a644c3a6ef90e2f1",
+                    "name": "name",
+                    "value": "",
+                    "description": "",
+                    "disabled": false
+                }
+            ],
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/10.1.0"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1715226891259,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_8915a6d8ca2943a28a9369b76d53089a",
+            "parentId": "wrk_3866b817c9dc41f7b9d8cc6fd06ce11f",
+            "modified": 1729187475795,
+            "created": 1729137936337,
+            "url": "{{ _.baseUrl }}/api/pokemon",
+            "name": "Agregar pokemon",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"name\": \"\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/10.1.0"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1715226891159,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_393019609102445b9773f2efa4e0996b",
+            "parentId": "wrk_3866b817c9dc41f7b9d8cc6fd06ce11f",
+            "modified": 1729187484488,
+            "created": 1729138017859,
+            "url": "{{ _.baseUrl }}/api/pokemon/",
+            "name": "Editar pokemon",
+            "description": "",
+            "method": "PUT",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"newName\": \"\"\n}"
+            },
+            "parameters": [
+                {
+                    "id": "pair_eb65e0387e1743a68ef5f320c759de62",
+                    "name": "name",
+                    "value": "",
+                    "description": "",
+                    "disabled": false
+                }
+            ],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/10.1.0"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1708271637697,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_07e40264296d401cad37a5321aba687f",
+            "parentId": "wrk_3866b817c9dc41f7b9d8cc6fd06ce11f",
+            "modified": 1729187488357,
+            "created": 1729138357690,
+            "url": "{{ _.baseUrl }}/api/pokemon/",
+            "name": "Eliminar pokemon",
+            "description": "",
+            "method": "DELETE",
+            "body": {},
+            "parameters": [
+                {
+                    "id": "pair_921c5cc5e4784b2da33b3c10fabac37b",
+                    "name": "name",
+                    "value": "",
+                    "description": "",
+                    "disabled": false
+                }
+            ],
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/10.1.0"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1708271637597,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "env_2c7445b924e1d8094de118d86c5d055a184a5f47",
+            "parentId": "wrk_3866b817c9dc41f7b9d8cc6fd06ce11f",
+            "modified": 1729187572581,
+            "created": 1729137277255,
+            "name": "Base Environment",
+            "data": {
+                "baseUrl": "http://localhost:3000"
+            },
+            "dataPropertyOrder": {
+                "&": [
+                    "baseUrl"
+                ]
+            },
+            "color": null,
+            "isPrivate": false,
+            "metaSortKey": 1729137277256,
+            "_type": "environment"
+        },
+        {
+            "_id": "jar_2c7445b924e1d8094de118d86c5d055a184a5f47",
+            "parentId": "wrk_3866b817c9dc41f7b9d8cc6fd06ce11f",
+            "modified": 1729137277260,
+            "created": 1729137277260,
+            "name": "Default Jar",
+            "cookies": [],
+            "_type": "cookie_jar"
+        }
+    ]
+}
