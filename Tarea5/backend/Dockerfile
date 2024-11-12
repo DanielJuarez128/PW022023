@@ -2,7 +2,7 @@
 FROM node:18
 
 # Configura el directorio de trabajo
-WORKDIR /app
+WORKDIR /backend
 
 # Copia los archivos del backend
 COPY package*.json ./
@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Expone el puerto en el que el backend escuchará
-EXPOSE 3000
+EXPOSE 5000
 
 # Ejecuta el backend
 CMD ["node", "server.js"]

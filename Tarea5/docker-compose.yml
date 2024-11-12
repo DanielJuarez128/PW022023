@@ -1,10 +1,11 @@
-version: '1'
+version: '3'
 
 services:
   backend:
     build: ./backend
+    container_name: pokecrud_backend
     ports:
-      - "3000:3000"
+      - "5000:5000"
     environment:
       - MONGO_URI=mongodb://mongo:27017/pokemonDB
     depends_on:
@@ -12,15 +13,17 @@ services:
 
   frontend:
     build: ./frontend
+    container_name: pokecrud_frontend
     ports:
-      - "3000:80"
+      - "8080:80"
     environment:
       - REACT_APP_API_URL=http://backend:3000/api/pokemon
     depends_on:
       - backend
 
   mongo:
-    image: mongo
+    image: mongo@lastest
+    container_name: pokecrud_db
     ports:
       - "27017:27017"
     volumes:

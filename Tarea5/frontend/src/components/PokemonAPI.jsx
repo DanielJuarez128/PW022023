@@ -1,4 +1,4 @@
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3000/api/pokemon';
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api/pokemon';
 
 export const getPokemonList = async () => {
     const response = await fetch(API_URL);

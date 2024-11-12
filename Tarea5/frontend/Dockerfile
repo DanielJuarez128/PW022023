@@ -2,7 +2,7 @@
 FROM node:18 AS build
 
 # Establecer el directorio de trabajo en el contenedor
-WORKDIR /app
+WORKDIR /frontend
 
 # Copiar el archivo package.json y package-lock.json
 COPY package.json package-lock.json ./
@@ -20,7 +20,7 @@ RUN npm run build
 FROM nginx:alpine
 
 # Copiar la aplicación construida a la imagen de Nginx
-COPY --from=build /app/build /usr/share/nginx/html
+COPY --from=build /frontend/dist /usr/share/nginx/html
 
 # Exponer el puerto en el que se servirá la aplicación
 EXPOSE 80
